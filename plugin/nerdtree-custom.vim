@@ -3,6 +3,9 @@
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Sets NERDTree to show hidden files and folders
+let NERDTreeShowHidden=1
+
 " Easily open|close NERDTree. The <Leader> here adheres to mapleader
 " statements in .vimrc.
 nnoremap <Leader>f :NERDTreeToggle<cr>
